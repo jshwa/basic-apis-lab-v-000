@@ -5,4 +5,6 @@
   <%= submit_tag "Search Github!" %>
 <% end %>
 
-<%= @result.body if @result %>
+<% @resp.each do |r| %>
+  <%= r.name %>
+<% end %>
