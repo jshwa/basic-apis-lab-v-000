@@ -6,7 +6,9 @@
 <% end %>
 
 <% if @items %>
+  <ul>
   <% @items.each do |item| %>
-    <%= item['name'] %>
+    <li><%= item['name'] %></li>
   <% end %>
+  </ul>
 <% end %>
