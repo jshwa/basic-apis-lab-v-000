@@ -9,9 +9,6 @@ class RepositoriesController < ApplicationController
       g.params['q'] = params[:query]
     end
     @resp = JSON.parse(result.body)
-    
-
-
     render 'search'
   end
 end
