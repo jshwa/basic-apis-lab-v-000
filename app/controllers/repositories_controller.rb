@@ -5,7 +5,9 @@ class RepositoriesController < ApplicationController
   end
 
   def github_search
-    @result = Faraday.get 'https://api.github.com/search/repositories?q=octocat'
+    @result = Faraday.get 'https://api.github.com/search/repositories' do |g|
+      g.params['q'] = params[:query]
+    end
     render 'search'
   end
 end
