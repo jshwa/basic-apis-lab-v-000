@@ -9,7 +9,7 @@ class RepositoriesController < ApplicationController
       g.params['q'] = params[:query]
     end
     parsed_resp = JSON.parse(result.body)
-    @item = parsed_resp['items']
+    @items = parsed_resp['items']
     render 'search'
   end
 end
